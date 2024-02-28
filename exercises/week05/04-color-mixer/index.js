@@ -17,11 +17,20 @@ function updateColor() {
     If yellow and blue are turned on, make the background green.
     If everything is turned on, then make the background black.
     */
-    if (redElement.value === "on") {
+   
+    if (redElement.value === "on" && yellowElement.value === "on" && blueElement.value === "on") {
+        setBackgroundColor("#171615"); 
+    } else if (yellowElement.value === "on" && blueElement.value === "on") {
+        setBackgroundColor("#40ad49");
+}    else if (blueElement.value === "on" && redElement.value === "on") {
+    setBackgroundColor("#a15beb");
+}   else  if (redElement.value === "on") {
         setBackgroundColor("red");
     } else if (yellowElement.value === "on") {
         setBackgroundColor("yellow");
-    } else {
+    } else if (blueElement.value === "on") {
+        setBackgroundColor("blue");
+     } else {
         setBackgroundColor("white");
     }
 }
